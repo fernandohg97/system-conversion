@@ -12,7 +12,6 @@ function toBinary () {
     result = Math.floor(result / 2)
     binaryArray.push(res)
   }
-  console.log(binaryArray.reverse())
   binaryArray = binaryArray.join('')
   binaryNumber.innerHTML = binaryArray
   binaryArray = []
@@ -30,7 +29,6 @@ function toOctal () {
     result = Math.floor(result / 8)
     octalArray.push(res)
   }
-  console.log(octalArray.reverse())
   octalArray = octalArray.join('')
   octalNumber.innerHTML = octalArray
   octalArray = []
@@ -40,12 +38,12 @@ function toOctal () {
 function binaryToDecimal () {
   var sum = 0
   let num = 0
-  let binary = []
+  let binary = [] // Arreglo para almacenar las potencias de 2
 
   var decimalNumber = document.getElementById('decimalNumber-b')
   let result = document.getElementById('number-bd').value // numero del usuario
   let length = result.toString().length // Numero de caracteres del numero del usuario
-  let binaryNumber = []
+  let binaryNumber = [] // Arreglo para almacenar el numero del usuario
   // Ciclo para almacenar cada caracter del numero de usuario al arreglo binaryNumber
   for (var i = 0; i < length; i++) {
     let element = parseInt(result.charAt(i))
@@ -105,9 +103,9 @@ function toHexa () {
   var f = 'F'
   let divResult
   let res // Residuo de la division
-  let decimalArray = []
-  let hexadecimalValues = []
-  let hexadecimalNumbers = []
+  let decimalArray = [] // Arreglo para almacenar el numero del usuario
+  let hexadecimalValues = [] // Arreglo para almacenar las potencias de 16
+  let hexadecimalNumbers = [] // Arreglo para almacenar el numero hexadecimal
   var hexadecimalNumber = document.getElementById('hexadecimalNumber')
   let result = document.getElementById('number-dh').value
   let length = result.toString().length
@@ -125,23 +123,17 @@ function toHexa () {
       break
     }
   }
-  console.log(hexadecimalValues)
   hexadecimalValues = hexadecimalValues.reverse()
-  console.log(hexadecimalValues)
   divResult = parseInt(result)
   for (var i = 0; i < hexadecimalValues.length; i++) {
     res = divResult % hexadecimalValues[i]
-
     divResult = Math.floor(divResult / hexadecimalValues[i])
-    console.log(res)
-    console.log(divResult)
     hexadecimalNumbers.push(divResult)
     if (res <= 15) {
       hexadecimalNumbers.push(res)
       break
     }
     divResult = res
-    console.log(divResult)
   }
   for (var i = 0; i < hexadecimalNumbers.length; i++) {
     switch (hexadecimalNumbers[i]) {
@@ -166,35 +158,29 @@ function toHexa () {
     }
   }
   hexadecimalNumber.innerHTML = hexadecimalNumbers.join('')
-  console.log(hexadecimalNumbers)
 }
 
+// Sistema hexadecimal a sistema decimal
 function hexaToDecimal () {
   let mult = 0 // Multiplicacion del numero hexadecimal por la potencia
   let sum = 0 // Suma del resultado de la multiplicacion
-  let hexadecimalValues = []
-  let hexadecimalNumber = []
-  let result = document.getElementById('number-hd').value
-  let decimalNumber_h = document.getElementById('decimalNumber-h')
-  let length = result.length
-  console.log(result)
+  let hexadecimalValues = [] // Arreglo para almacenar las potencias de 16
+  let hexadecimalNumber = [] // Arreglo para almacenar el numero del usuario
+  let result = document.getElementById('number-hd').value // Numero del usuario
+  let decimalNumber_h = document.getElementById('decimalNumber-h') // Variable para mostrar el numero decimal
+  let length = result.length // Longitud de caracteres del numero
   for (var i = 0; i < length; i++) {
     let element = result.charAt(i)
-    // console.log(element)
     if (element === '0' || element === '1' || element === '2' || element === '3' || element === '4' || element === '5' || element === '6' || element === '7' || element === '8' ||
     element === '9') {
-      console.log(element)
       element = parseInt(element)
     }
-    console.log(element)
     hexadecimalNumber.push(element)
   }
-  console.log(hexadecimalNumber)
   for (var i = hexadecimalNumber.length - 1; i >= 0; i--) {
     let value = Math.pow(16, i)
     hexadecimalValues.push(value)
   }
-  console.log(hexadecimalValues)
   for (var i = 0; i < hexadecimalNumber.length; i++) {
     switch (hexadecimalNumber[i]) {
       case 'A':
@@ -220,5 +206,4 @@ function hexaToDecimal () {
     sum += mult
   }
   decimalNumber_h.innerHTML = sum
-  console.log(sum)
 }
