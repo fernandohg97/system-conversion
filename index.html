@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conversion de sistemas numericos</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"> -->
+  </head>
+  <body>
+    <div class="">
+      <h1 align="center">Conversión de sistemas numéricos</h1>
+    </div>
+    <section>
+      <article class="">
+        <h3>Conversión de sistema decimal a sistema binario</h1>
+        <div>
+          <label for=""> Ingresa un numero entero:
+            <input id="number-db" type="number" name="" value="0" placeholder="Numero...">
+            <button onclick="toBinary()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero binario: <p id="binaryNumber"></p>
+        </div>
+      </article>
+      <article class="">
+        <h3>Conversión de sistema binario a sistema decimal</h1>
+        <div>
+          <label for=""> Ingresa un numero binario:
+            <input id="number-bd" type="number" name="" value="0" placeholder="Numero...">
+            <button onclick="binaryToDecimal()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero decimal: <p id="decimalNumber-b"></p>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <article class="">
+        <h1>Conversión de sistema decimal a sistema octal</h1>
+        <div>
+          <label for=""> Ingresa un numero entero:
+            <input id="number-do" type="number" name="" value="0" placeholder="Numero...">
+            <button onclick="toOctal()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero octal: <p id="octalNumber"></p>
+        </div>
+      </article>
+      <article class="">
+        <h1>Conversión de sistema octal a sistema decimal</h1>
+        <div>
+          <label for=""> Ingresa un numero octal:
+            <input id="number-od" type="number" name="" value="0" placeholder="Numero...">
+            <button onclick="octalToDecimal()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero decimal: <p id="decimalNumber-o"></p>
+        </div>
+      </article>
+      <article class="">
+        <h1>Conversión de sistema decimal a sistema hexadecimal</h1>
+        <div>
+          <label for=""> Ingresa un numero entero:
+            <input id="number-dh" type="number" name="" value="0" placeholder="Numero...">
+            <button onclick="toHexa()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero hexadecimal: <p id="hexadecimalNumber"></p>
+        </div>
+      </article>
+      <article class="">
+        <h1>Conversión de sistema hexadecimal a sistema decimal</h1>
+        <div>
+          <label for=""> Ingresa un numero hexadecimal:
+            <input id="number-hd" name="" value="0" placeholder="Numero...">
+            <button onclick="hexaToDecimal()" name="button">Calcular</button>
+          </label>
+        </div>
+        <div class="">
+          Numero decimal: <p id="decimalNumber-h"></p>
+        </div>
+      </article>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
