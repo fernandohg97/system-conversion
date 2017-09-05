@@ -4,13 +4,52 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Conversion de sistemas numericos</title>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="./app.css">
   </head>
   <body>
-    <div class="">
-      <h1 align="center">Conversión de sistemas numéricos</h1>
+    <div class="grid-x grid-padding-x title">
+      <div class="large-12 cell">
+        <h1 class="text-center">Conversión de sistemas numéricos</h1>
+      </div>
     </div>
-    <section>
+
+
+    <section id="content" class="grid-container btn-group">
+      <div id="content1">
+
+      <div class="grid-x grid-padding-x small-up-2 medium-up-2 large-up-3 buttons btn-1 text-center">
+        <article class="">
+          <button id="d/b" onclick="calculate()" class="button large">Sistema decimal a sistema binario</button>
+          <button id="d/o" onclick="calculate()" class="button large">Sistema decimal a sistema octal</button>
+          <button id="b/d" onclick="calculate()" class="button large">Sistema binario a sistema decimal</button>
+        </article>
+      </div>
+      <div class="grid-x grid-padding-x small-up-2 medium-up-2 large-up-3 buttons btn-2 text-center">
+        <article class="">
+          <button id="o/d" onclick="calculate()" class="button large">Sistema octal a sistema decimal</button>
+          <button id="d/h" onclick="calculate()" class="button large">Sistema decimal a sistema hexadecimal</button>
+          <button id="h/d" onclick="calculate()" class="button large">Sistema hexadecimal a sistema decimal</button>
+        </article>
+      </div>
+    </div>
+    </section>
+
+    <!-- <section class="grid-x grid-padding-x">
+      <div class="medium-4 cell">
+        <label for=""> Ingresar numero:
+          <input value="0" placeholder="Numero...">
+        </label>
+      </div>
+      <div class="medium-4 cell">
+        <button type="button large" name="button">Calcular</button>
+      </div>
+      <div class="medium-4 cell">
+        <p id="result" class=""></p>
+      </div>
+    </section> -->
+
+    <!-- <section>
       <article class="">
         <h3>Conversión de sistema decimal a sistema binario</h1>
         <div>
@@ -86,7 +125,7 @@
           Numero decimal: <p id="decimalNumber-h"></p>
         </div>
       </article>
-    </section>
+    </section> -->
 
     <script src="app.js"></script>
   </body>

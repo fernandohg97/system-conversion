@@ -1,4 +1,39 @@
 /* Code */
+var content = document.getElementById('content')
+var content1 = document.getElementById('content1')
+
+
+
+function calculate () {
+  let div = document.createElement('DIV')
+  div.setAttribute('class', 'grid-x grid-padding-x')
+  let div2 = document.createElement('DIV')
+  div2.setAttribute('class', 'medium-4 cell')
+  let label = document.createElement('LABEL')
+  let labelMsg = document.createTextNode('Ingresa un numero:')
+  label.appendChild(labelMsg)
+  div2.appendChild(label)
+  let input = document.createElement('INPUT')
+  input.setAttribute('value', '0')
+  label.appendChild(input)
+  let div3 = document.createElement('DIV')
+  div3.setAttribute('class', 'medium-4 cell')
+  let btn = document.createElement('BUTTON')
+  btn.setAttribute('type', 'button large')
+  let btnMsg = document.createTextNode('Calcular')
+  btn.appendChild(btnMsg)
+  div3.appendChild(btn)
+  let div4 = document.createElement('DIV')
+  div4.setAttribute('class', 'medium-4 cell')
+  let p = document.createElement('P')
+  p.setAttribute('id', 'result')
+  div4.appendChild(p)
+  div.appendChild(div2)
+  div.appendChild(div3)
+  div.appendChild(div4)
+  content.replaceChild(div, content1)
+}
+
 
 // Sistema decimal a sistema binario
 function toBinary () {
@@ -30,7 +65,7 @@ function toOctal () {
     octalArray.push(res)
   }
   octalArray = octalArray.join('')
-  octalNumber.innerHTML = octalArray
+  octalNumber.innerHTML = octalArray.reverse()
   octalArray = []
 }
 
